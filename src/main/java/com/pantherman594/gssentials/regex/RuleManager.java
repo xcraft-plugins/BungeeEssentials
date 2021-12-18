@@ -34,7 +34,7 @@
 /*    */   
 /*    */   public RuleManager() {
 /* 36 */     this.rules.clear();
-/* 37 */     List<Map<String, String>> section = BungeeEssentials.getInstance().getMessages().getList("rules");
+/* 37 */     List<Map<String, String>> section = (List<Map<String, String>>) BungeeEssentials.getInstance().getMessages().getList("rules");
 /* 38 */     for (Map<String, String> map : section) {
 /* 39 */       Rule rule = Rule.deserialize(map);
 /* 40 */       if (rule != null) {

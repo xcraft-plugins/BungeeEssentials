@@ -1,7 +1,0 @@
-name: BungeeEssentials
-main: com.pantherman594.gssentials.BungeeEssentials
-version: 2.6.4
-author: PantherMan594
-softdepends:
-- BungeeAdminTools
-- BungeeSuite
