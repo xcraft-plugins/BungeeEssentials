@@ -1,0 +1,125 @@
+enable:
+- alert
+- announcement
+- autoredirect
+- commandspy
+- fastrelog
+- friend
+- hide
+- hoverlist
+- joinannounce
+- lookup
+- mute
+- send
+- sendall
+- spy
+- staffchat
+- chat
+- find
+- ignore
+- join
+- list
+- message
+- msggroup
+- slap
+- aliases
+- server
+#- betaupdates
+- fulllog
+- log
+- rules
+- rules-chat
+- spam
+- spam-chat
+- spam-command
+- updater
+commands:
+  alert:
+  - alert
+  - broadcast
+  commandspy:
+  - commandspy
+  - cspy
+  hide:
+  - hide
+  lookup:
+  - lookup
+  mute:
+  - bmute
+  send:
+  - send
+  sendall:
+  - sendall
+  spy:
+  - spy
+  - socialspy
+  staffchat:
+  - staffchat
+  - admin
+  - a
+  - sc
+  chat:
+  - g
+  - global
+  find:
+  - find
+  - whereis
+  friend:
+  - friend
+  ignore:
+  - bignore
+  join:
+  - join
+  list:
+  - glist
+  - servers
+  - serverlist
+  message:
+  - message
+  - msg
+  - m
+  - pm
+  - t
+  - tell
+  - w
+  - whisper
+  msggroup:
+  - msggroup
+  - mg
+  reply:
+  - reply
+  - r
+  slap:
+  - slap
+  - uslap
+  - smack
+  reload:
+  - gssreload
+capspam:
+  enabled: true
+  percent: 50 #Will make all lowercase if at least 50% of letters are capitalized.
+database:
+  format: sqlite #If you want to use MySQL, fill replace with "mysql" and uncomment and fill in the following:
+  # host: 127.0.0.1
+  # port: 3306
+  # username: user
+  # password: pass
+  # database: bungeecord
+  # prefix: BE_
+  # convert: true
+aliases:
+  greet:
+  - 'TELL: Joining {0}...'
+  - 'TELL {0}: {{ PLAYER }} was at {{ SERVER }} but is coming to join you!'
+  - join {0}
+  disappear:
+  - spy
+  - cspy
+  - hide
+  - 'TELL ALL: &8[&c-&8] &7{{ PLAYER }}'
+  vote:
+  - 'CONSOLE: staffchat {{ PLAYER }} wants to vote!'
+  - 'TELL: Vote for the server at yourvote.site!'
+  mga:
+  - msggroup admin {*}
+configversion: 2.6.4

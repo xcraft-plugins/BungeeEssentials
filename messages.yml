@@ -1,0 +1,230 @@
+format:
+  alert: '&8[&4!&8] &4{{ MESSAGE }}'
+  join: '&8[&a+&8] &7{{ PLAYER }}'
+  quit: '&8[&c-&8] &7{{ PLAYER }}'
+  kick: '{{ PLAYER }} was kicked for {{ REASON }}'
+  chat: '{{ PLAYER }}: {{ MESSAGE }}'
+  find: '&e{{ PLAYER }} &ais playing on &e{{ SERVER }}'
+  send: '&aSending &e{{ PLAYER }} &ato server &e{{ SERVER }}'
+message:
+  format:
+    send: '&7[me » {{ BREAK }}&7{{ RECIPIENT }}{{ HOVER: On the {{ SERVER }} server.
+      }}{{ BREAK }}&7] &f{{ MESSAGE }}'
+    receive: '&7[{{ SENDER }} » me]{{ HOVER: On the {{ SERVER }} server. Click to
+      respond. }}{{ CLICK: SUG: /msg {{ SENDER }}  }} &f{{ MESSAGE }}'
+  enabled: '&aMessaging is now enabled!'
+  disabled: '&cMessaging is now disabled!'
+msggroup:
+  format: '&9{{ NAME }} - {{ SENDER }} » &7{{ MESSAGE }}'
+  create: '&aMessage group &f{{ NAME }} &asuccessfuly created! Invite players with
+    /msggroup invite <username> {{ NAME }}!{{ HOVER: Click to prepare command. }}{{
+    CLICK: SUG: /msggroup invite <username> {{ NAME }} }}'
+  join: '&aSuccessfully joined the &f{{ NAME }} &amessage group.'
+  leave: '&aSuccessfully left the &f{{ NAME }} &amessage group.'
+  rename: '&aMessage group &f{{ OLDNAME }} &arenamed to &f{{ NAME }}&a.'
+  invite:
+    send: '&aSuccessfully invited &f{{ PLAYER }} &ato the &f{{ NAME }} &amessage group.'
+    receive: '&aYou''ve been invited to join the &f{{ NAME }} &amessage group. Click
+      to accept!{{ CLICK: /msggroup join {{ NAME }} }}'
+  kick:
+    send: '&aSuccessfully kicked &f{{ PLAYER }} &afrom the &f{{ NAME }} &amessage
+      group.'
+    receive: '&cYou''ve been kicked from the &f{{ NAME }} &cmessage group.'
+  disband: '&aSuccessfully disbanded the &f{{ NAME }} &amessage group.'
+  error:
+    invalidname: '&cMessage group names must contain lowercase letters only, and must
+      be at least 3 letters long.'
+    nametaken: '&cSorry, that name has already been taken.'
+    notinvited: '&cSorry, you can only join message groups with an invite.'
+    notingroup: '&cSorry, you''re not in that message group.'
+    notexist: '&cSorry, that message group doesn''t exist.'
+    alreadyingroup: '&cWhoops, I think you''re already in that group!'
+  admin:
+    listgroups:
+      header: '&6Message Groups:'
+      body: '&f- {{ NAME }}: {{ MEMBERS }}'
+    owner: '{{ PLAYER }} is now the owner of the {{ NAME }} message group.'
+warnings:
+  similarity: '&cPlease do not spam other players!'
+  swearing: '&cPlease do not swear at other players!'
+  advertising: '&cPlease do not advertise other servers!'
+rulenotify:
+  advertisement: '&7{{ PLAYER }} just advertised!'
+  cursing: '&7{{ PLAYER }} just swore!'
+  replace: '&7{{ PLAYER }} swore but was replaced!'
+  command: '&7{{ PLAYER }} swore, triggering a command!'
+staffchat:
+  message: '&c{{ SERVER }} - {{ SENDER }} » &7{{ MESSAGE }}'
+  enabled: '&aYou are now chatting in staff chat!'
+  disabled: '&cYou are no longer chatting in staff chat!'
+chat:
+  message: '&e{{ SERVER }} - {{ SENDER }} » &7{{ MESSAGE }}'
+  enabled: '&aYou are now chatting in global chat!'
+  disabled: '&cYou are no longer chatting in global chat!'
+list:
+  header: |-
+    &aYou are on {{ CURRENT }}
+    &aServers:
+  body: '&a- {{ SERVER }} ({{ DENSITY }}&a)'
+hoverlist:
+  friend:
+    order: '1'
+    header: '&aFriends Online:'
+  staff:
+    order: '2'
+    header: '&6Staff Online:'
+  other:
+    order: '0' #Will not be shown
+    header: '&7Other Players:'
+lookup:
+  header: '&6Found {{ SIZE }} player(s):'
+  body: '&f - {{ PLAYER }}{{ HOVER: Click to view player info }}{{ CLICK: /lookup
+    {{ PLAYER }} }}'
+  player:
+    header: '&6=====&l{{ PLAYER }}&6====='
+    format: '&6{{ TYPE }}: &f{{ INFO }}{{ HOVER: Click to copy }}{{ CLICK: SUG: {{
+      INFO }} }}'
+spy:
+  message: '&7[{{ SENDER }} » {{ RECIPIENT }}] &7{{ MESSAGE }}'
+  enabled: '&aSpy has been enabled'
+  disabled: '&cSpy has been disabled'
+commandspy:
+  command: '&7[{{ SENDER }}] &b{{ COMMAND }}'
+  enabled: '&aCommand Spy has been enabled'
+  disabled: '&cCommand Spy has been disabled'
+friend:
+  header: '&2Current Friends:'
+  body: '- {{ NAME }} ({{ SERVER }}){{ HOVER: Click to join your friend! }}{{ CLICK:
+    /server {{ SERVER }} }}'
+  new: '&aYou are now friends with {{ NAME }}!'
+  old: '&aYou are already friends with {{ NAME }}!'
+  remove: '&cYou are no longer friends with {{ NAME }}.'
+  removeerror: '&cYou can''t remove a friend you don''t have!'
+  outrequests:
+    header: '&2Outgoing Friend Requests:'
+    body: '- {{ NAME }}'
+    new: '&a{{ NAME }} has received your friend request.'
+    old: '&cYou already requested to be friends with {{ NAME }}. Please wait for a
+      response!'
+    remove: '&cThe friend request to {{ NAME }} was cancelled.'
+  inrequests:
+    header: '&2Incoming Friend Requests:'
+    body: '- {{ NAME }}{{ BREAK }}  &a[Y]{{ HOVER: Click to accept the request! }}{{
+      CLICK: /friend add {{ NAME }} }}{{ BREAK }} {{ BREAK }}&c[N]{{ HOVER: Click
+      to deny the request. }}{{ CLICK: /friend remove {{ NAME }} }}'
+    new: |-
+      &a{{ NAME }} would like to be your friend! Click one:{{ BREAK }}
+      &a[Yes!]{{ HOVER: Click to accept the request! }}{{ CLICK: /friend add {{ NAME }} }}{{ BREAK }}     {{ BREAK }}&c[No]{{ HOVER: Click to deny the request. }}{{ CLICK: /friend remove {{ NAME }} }}
+    remove: '&cThe friend request from {{ NAME }} was cancelled.'
+hide:
+  enabled: '&aYou are now hidden from all players!'
+  disabled: '&cYou are now visible to all players!'
+ignore:
+  enabled: '&6Now ignoring {{ PLAYER }}.'
+  disabled: '&6No longer ignoring {{ PLAYER }}.'
+slap:
+  slapper: '&aYou just slapped &e{{ SLAPPED }}&a. I bet that felt good, didn''t it?'
+  slapped: '&cYou were just slapped by &e{{ SLAPPER }}&c! Ouch! (/slap him back!)'
+mute:
+  muted:
+    enabled: '&cYou are now muted!'
+    disabled: '&aYou are no longer muted!'
+    error: '&cHey, you can''t chat while muted!'
+  muter:
+    enabled: '&c{{ PLAYER }} is now muted!'
+    disabled: '&a{{ PLAYER }} is no longer muted!'
+    exempt: '&cHey, you can''t mute that player!'
+    error: '&7{{ PLAYER }} tried to chat while muted!'
+errors:
+  invalid: '&cInvalid arguments provided. Usage: {{ HELP }}{{ HOVER: Click to fill
+    in command }}{{ CLICK: SUG: {{ HELP }} }}'
+  notfound: '&cSorry, no player was found.'
+  slap: '&cYou are unworthy of slapping people.'
+  messages: '&cNobody has messaged you recently.'
+  ignoreself: '&cYou can''t ignore yourself!'
+  ignoring: '&cYou can''t send a message to someone you''re ignoring!'
+  sendfail: '&cUnable to send {{ PLAYER }} to {{ SERVER }}.'
+  fastrelog: '&cPlease wait before reconnecting!'
+rules:
+- pattern: \bfuck\b
+  handle: CURSING
+- pattern: \b(([\w\d]{2,})\s*.(\.|d.t).{0,5})+(net|com|xyz|me|org|site|pw|top|io|co|biz|eu|uk)\b
+  handle: ADVERTISEMENT
+- pattern: \b(([\w\d]{2,})\s*.(\.|dot).{0,5})+(net|com|xyz|me|org|site|pw|top|io|co|biz|eu|uk)
+  handle: ADVERTISEMENT
+- pattern: \b.+((\.|dot).+)*(\.|dot)[^\s]*[a-zA-Z]{2,5}
+  handle: ADVERTISEMENT
+- pattern: (\d{1,4}\.){3}\d{1,4}
+  handle: ADVERTISEMENT
+- pattern: asshole
+  handle: REPLACE
+  replacement: '******'
+- pattern: I hate (this|your) server
+  handle: REPLACE
+  replacement: I love this server
+- pattern: I hate (this|your) server
+  handle: COMMAND
+  command: send {{ SENDER }} lobby
+bannedwords:
+  replace: '*'
+  list:
+  - anal
+  - anus
+  - aroused
+  - asshole
+  - bastard
+  - bitch
+  - boob
+  - bugger
+  - cock
+  - cum
+  - cunt
+  - dafuq
+  - dick
+  - ffs
+  - fuck
+  - gay
+  - hentai
+  - homo
+  - homosexual
+  - horny
+  - intercourse
+  - jerk
+  - lesbian
+  - milf
+  - nigga
+  - nigger
+  - pedo
+  - penis
+  - piss
+  - prostitute
+  - pussy
+  - rape
+  - rapist
+  - retard
+  - sex
+  - shit
+  - slag
+  - slut
+  - sperm
+  - spunk
+  - testicle
+  - titt
+  - tosser
+  - twat
+  - vagina
+  - wanker
+  - whore
+  - wtf
+announcements:
+  vote:
+    delay: 30 #Time measured in seconds
+    interval: 60
+    message: Vote for our server for great rewards!
+    server: Hub
+  donate:
+    delay: 0
+    interval: 60
+    message: |-
+      Donate to support our server!
+      &f&ndonate.myserver.com
